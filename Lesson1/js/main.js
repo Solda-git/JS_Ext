@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // комментарии к домашке.
 //Задание 1. для аккуратности, простоты и скорости использовал компоненты bootstrap:
 // - стилизовал меню и карточку товара без использования css
@@ -13,31 +11,15 @@
 //Чтобы избавиться при рендеринге от запятых, я объединил массив строк, который возвращается методом map(), с помощью
 // встроенного метода массива - join() 
 
->>>>>>> Lesson1
+//>>>>>>> Lesson1
+alert("1");
 const products = [
     {id: 1, title: 'Notebook', price: 20000},
     {id: 2, title: 'Mouse', price: 1500},
     {id: 3, title: 'Keyboard', price: 5000},
     {id: 4, title: 'Gamepad', price: 4500},
 ];
-
-<<<<<<< HEAD
-const renderProduct = (title, price) => {
-    return `<div class="product-item">
-                <h3>${title}</h3>
-                <p>${price}</p>
-                <button class="by-btn">Добавить в корзину</button>
-              </div>`;
-};
-
-const renderProducts = (list) => {
-    // const productList = list.map(item => renderProduct(item.title, item.price));
-    const productList = list.map((item) => {
-        return renderProduct(item.title, item.price);
-    });
-
-    document.querySelector('.products').innerHTML = productList;
-=======
+alert("2");
 const renderProduct = (title, price, currency = 'руб', img = 'img/proxy.jpg') => {
                                                                                     //task #1,#2
      return `<div class="card product-item" style="width: 18rem;">                  
@@ -50,16 +32,13 @@ const renderProduct = (title, price, currency = 'руб', img = 'img/proxy.jpg')
     </div>
     <br>`       
 };
-
-//const renderProducts = (list) => {
-//      const productList = list.map((item) => {
-//        return renderProduct(item.title, item.price);
-//    });
+alert("3");
    
 const renderProducts = list => {                                                    //task #2
     const productList = list.map(item => renderProduct(item.title, item.price));    //task #2    
     document.querySelector('.products').innerHTML = productList.join(' ');          //task #3
->>>>>>> Lesson1
+//>>>>>>> Lesson1
 };
-
+alert("4");
 renderProducts(products);
+alert("5");    

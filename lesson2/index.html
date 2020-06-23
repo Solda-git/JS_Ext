@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">Интернет-магазин</div>
+    <button class="btn-cart" type="button">Корзина</button>
+</header>
+<main>
+    <div class="products"></div>
+    <div class="spice" data-price="10" data-calories="5"></div>
+</main>
+<script src="./js/main.js"></script>
+<br>
+<h1>Закажи Бургер</h1>
+<div class = "eatery"> 
+	<div class = "burgerSize"> 
+		<div class = "large" data-price="100" data-cals="40">
+			<img src = './img/burger1.jpg'>
+			<input type="radio" name="burgerSize" class = "size" id="bigBurger">
+			<label for="bigBurger">King size</label>
+		</div>
+		<div class = "small" data-price="50" data-cals="20">	
+			<img src = './img/burger1.jpg'>	
+			<input type="radio" name="burgerSize" class = "size" id="smallBurger">
+			<label for="smallBurger">Standard</label>
+		</div>		
+	</div>	
+	<div class = "stuffing"> 
+		<div class = "cheese" data-price="10" data-cals="20">
+			<img src = './img/cheese.jpg'>
+			<input type="radio" name='stuffing' class = "stuffing_type" id="stCheese">
+			<label for="stCheese">Cheese</label>
+		</div>
+		<div class = "salad" data-price="20" data-cals="5">
+			<img src = './img/salad.jpg'>
+			<input type="radio" name='stuffing' class = "stuffing_type" id="stSalad">
+			<label for="stSalad">Salad</label>
+		</div>
+		<div class = "fries" data-price="15" data-cals="10">
+			<img src = './img/fries.jpg'>
+			<input type="radio" name='stuffing' class = "stuffing_type" id="stFries">
+			<label for="stCheese">Fries</label>
+		</div>
+	</div>
+	<div class = "topping"> 
+		<div class = "spices" data-price="15" data-cals="0">
+			<img src = './img/spices.jpg'>
+			<input type="checkbox" name="topping" class = "topping_type" id="tSpices">
+			<label for="tSpices">Spices</label>
+		</div>
+		<div class = "sauce" data-price="20" data-cals="5">
+			<img src = './img/sauce.png'>
+			<input type="checkbox" name="topping" class = "topping_type" id="tSauсe">
+			<label for="tSauce">Sauce</label>
+		</div>
+	</div>
+</div>
+</body>
+</html>

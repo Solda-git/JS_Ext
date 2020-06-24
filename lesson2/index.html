@@ -14,52 +14,64 @@
 <main>
     <div class="products"></div>
     <div class="spice" data-price="10" data-calories="5"></div>
-</main>
+
 <script src="./js/main.js"></script>
 <br>
-<h1>Закажи Бургер</h1>
+<header>
+<h1>Order Your Ouwn Burger</h1>
+</header>
 <div class = "eatery"> 
-	<div class = "burgerSize"> 
-		<div class = "large" data-price="100" data-cals="40">
-			<img src = './img/burger1.jpg'>
-			<input type="radio" name="burgerSize" class = "size" id="bigBurger">
+	<div class = "burgerSize">
+		<h2>Choose Your Size</h2>
+		<div class = "large" >
+			<img src = './img/burger2.jpg' class="img-eatery">
+			<input type="radio" name="burgerSize" class = "size" id="bigBurger" onclick = "setBurgerSize(event)" data-price="100" data-cals="40">
 			<label for="bigBurger">King size</label>
 		</div>
-		<div class = "small" data-price="50" data-cals="20">	
-			<img src = './img/burger1.jpg'>	
-			<input type="radio" name="burgerSize" class = "size" id="smallBurger">
+		<div class = "small" >	
+			<img src = './img/burger1.jpg' class="img-eatery">	
+			<input type="radio" name="burgerSize" class = "size" id="smallBurger" onclick = "setBurgerSize(event)" data-price="50" data-cals="20">
 			<label for="smallBurger">Standard</label>
 		</div>		
 	</div>	
 	<div class = "stuffing"> 
-		<div class = "cheese" data-price="10" data-cals="20">
-			<img src = './img/cheese.jpg'>
-			<input type="radio" name='stuffing' class = "stuffing_type" id="stCheese">
+		<h2>Choose Your Stuffing</h2>
+		<div class = "cheese">
+			<img src = './img/cheese.jpg' class="img-eatery">
+			<input type="radio" name='stuffing' class = "stuffing_type" id="stCheese" onclick = "setBurgerStuffing(event)" data-price="10" data-cals="20">
 			<label for="stCheese">Cheese</label>
 		</div>
-		<div class = "salad" data-price="20" data-cals="5">
-			<img src = './img/salad.jpg'>
-			<input type="radio" name='stuffing' class = "stuffing_type" id="stSalad">
+		<div class = "salad" >
+			<img src = './img/salad.jpg' class="img-eatery">
+			<input type="radio" name='stuffing' class = "stuffing_type" id="stSalad" onclick = "setBurgerStuffing(event)" data-price="20" data-cals="5">
 			<label for="stSalad">Salad</label>
 		</div>
-		<div class = "fries" data-price="15" data-cals="10">
-			<img src = './img/fries.jpg'>
-			<input type="radio" name='stuffing' class = "stuffing_type" id="stFries">
+		<div class = "fries">
+			<img src = './img/fries.jpg' class="img-eatery">
+			<input type="radio" name='stuffing' class = "stuffing_type" id="stFries" onclick = "setBurgerStuffing(event)" data-price="15" data-cals="10">
 			<label for="stCheese">Fries</label>
 		</div>
 	</div>
-	<div class = "topping"> 
-		<div class = "spices" data-price="15" data-cals="0">
-			<img src = './img/spices.jpg'>
-			<input type="checkbox" name="topping" class = "topping_type" id="tSpices">
+	<div class = "topping">
+		<h2>Add Toppings</h2> 
+		<div class = "spices">
+			<img src = './img/spices.jpg' class="img-eatery">
+			<input type="checkbox" name="topping" class = "topping_type" id="tSpices" onclick = "setBurgerTopping(event)" data-price="15" data-cals="0">
 			<label for="tSpices">Spices</label>
 		</div>
-		<div class = "sauce" data-price="20" data-cals="5">
-			<img src = './img/sauce.png'>
-			<input type="checkbox" name="topping" class = "topping_type" id="tSauсe">
+		<div class = "sauce">
+			<img src = './img/sauce.jpg' class="img-eatery">
+			<input type="checkbox" name="topping" class = "topping_type" id="tSauсe" onclick = "setBurgerTopping(event)" data-price="20" data-cals="5">
 			<label for="tSauce">Sauce</label>
 		</div>
 	</div>
 </div>
+<div class="result">
+	<button class="buy-btn" type="button" onclick = "getPriceCals()">Price & Calories</button>
+	<div class="summary">
+	</div>
+</div>	
+
+</main>
 </body>
 </html>

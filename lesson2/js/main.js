@@ -146,3 +146,185 @@ class Basket {
 //calculates total sum of the basket
     }
 }
+
+// Lesson 2
+// Task 3. 
+// Hamburger
+
+
+class HambSize {
+    constructor(sizeType, price, calories) {
+        this.sizeType = sizeType;
+        this.price = price;
+        this.calories = calories;
+    }
+    getSizeProperty(prop){
+        switch(prop) {
+            case(sizeType): return this.sizeType;
+            case(price): return this.price;
+            case(calories): return this.calories;
+            return 'Error. Wrong property.'
+        }
+    }
+    setSizeProperties(sizeType = this.sizeType, price = this.price, calories = this.calories) {
+        this.sizeType = sizeType;
+        this.price = price;
+        this.calories = calories;
+    }
+}
+
+class HambStuffing {
+    constructor(stuffingType, price, calories) {
+        this.stuffingType = stuffingType;
+        this.price = price;
+        this.calories = calories;
+    }
+
+    getStuffingProperty(prop){
+        switch(prop) {
+            case(stuffingType): return this.stuffingType;
+            case(price): return this.price;
+            case(calories): return this.calories;
+            return 'Error. Wrong property.'
+        }
+    }
+    setStuffingProperties(stuffingType = stuffingType, price = this.price, calories = this.calories) {
+        this.stuffingType = stuffingType;
+        this.price = price;
+        this.calories = calories;
+    }
+
+} 
+
+class HambTopping {
+    constructor(toppingType, price, calories) {
+        this.toppingType = toppingType;
+        this.price = price;
+        this.calories = calories;
+    }  
+
+    getToppingProperty(prop){
+        switch(prop) {
+            case(toppingType): return this.toppingType;
+            case(price): return this.price;
+            case(calories): return this.calories;
+            return 'Error. Wrong property.'
+        }
+    }
+    setToppingProperties(toppingType = this.toppingType, price = this.price, calories = this.calories) {
+        this.toppingType = toppingType;
+        this.price = price;
+        this.caloriesthis.calories = calories;
+    }
+} 
+
+class Hamburger {
+  constructor(size, stuffing) { 
+    this.size = size;
+    this.stuffing = stuffing;
+    this.toppings = [];
+    this.calories = this.calculateCalories();
+    this.price = this.calculatePrice();
+  }
+  addTopping(toppingType, price, calories) {    // Добавить добавку 
+    this.toppings.push(new HambTopping(toppingType, price, calories));
+  }
+  removeTopping(toppingType) { // Убрать добавку 
+    const index = this.toppings.findIndex(item => item.toppingType = toppingType);
+    if (index >= 0) {
+        delete this.toppings[index]; 
+    }
+    this.toppings.splice(index,1);
+
+  }
+  getToppings() {   // Получить список добавок 
+    return toppings;
+  }
+  getSize() {       // Узнать размер гамбургера
+    return this.size;            
+  }
+  getStuffing() {   // Узнать начинку гамбургера 
+    return this.stuffing;
+  }
+  calculatePrice() {       // Узнать цену 
+    let price = 0;
+    this.toppings.forEach(item => price += item.price);
+    return this.size.price + this.stuffing.price + price;
+  }
+  calculateCalories() {    // Узнать калорийность 
+    let cals = 0;
+    this.toppings.forEach(item => cals += item.calories);
+    return this.size.calories + this.stuffing.calories + cals;
+  }
+}
+
+
+let size, stuffing, hamburger;
+//= new HambTopping("",0,0);
+
+
+function setBurgerSize(event){
+    if (!size) {
+            size = new HambSize(event.target.id, +event.target.dataset.price, +event.target.dataset.cals);
+        }
+    else {
+        size.setSizeProperties(event.target.id, +event.target.dataset.price, +event.target.dataset.cals);
+    }    
+
+    if (stuffing) {
+        if (!hamburger) {
+            hamburger = new Hamburger(stuffing, size);
+        }
+    }
+}
+
+function setBurgerStuffing(event){
+    if (!stuffing) {
+            stuffing = new HambStuffing(event.target.id, +event.target.dataset.price, +event.target.dataset.cals);
+        }
+    else {
+        stuffing.setStuffingProperties(event.target.id, +event.target.dataset.price, +event.target.dataset.cals);
+    }    
+
+    if (size) {
+        if (!hamburger) {
+            hamburger = new Hamburger(stuffing, size);
+        }   
+    }
+}
+
+function setBurgerTopping(event){
+    const checked = event.target.checked;
+    if (!stuffing || !size) {
+            alert('Firts you need to choose the size and the stuffing of your hamburger.');
+            event.target.checked = !checked;
+            return -1;
+        }
+
+    if (!hamburger) {
+        hamburger = new Hamburger(stuffing, size);
+    }
+    
+    if (checked) {
+       hamburger.addTopping(event.target.id, +event.target.dataset.price, +event.target.dataset.cals); 
+    }
+    else {
+       hamburger.removeTopping(event.target.id);     
+    }
+}
+
+function getPriceCals() {
+    let summary; 
+    if (!stuffing || !size) {
+            summary = `<h2> Firts you need to choose the size and the stuffing of your hamburger. <h2>`;
+        }
+    else {    
+        if (!hamburger) {
+            hamburger = new Hamburger(stuffing, size);
+        }
+        summary = `<h2> Your hamburger's price is ${hamburger.calculatePrice()} \u20bd (${hamburger.calculateCalories()} calories).
+        Bonne appetit! </h2>` ;
+    }
+    const block = document.querySelector('.summary');
+    block.innerHTML = summary; 
+}

@@ -99,9 +99,9 @@ class ProductList {
         getPromisesRequest(`${API}/catalogData.json`)
         .then(data => {
             const goods = JSON.parse(data);
-             console.log(goods);
-             this.goods = [...goods];
-             this.render();
+            console.log(goods);
+            this.goods = [...goods];
+            this.render();
          })
         .catch(error => {
             console.log(`Bad xhr respose: ${error}`);
@@ -254,18 +254,13 @@ class Basket {
                                                              amount));
                     }
                 } else {
-                    new Promise((res, rej) => {
-                        throw new Error("Bad insert basket item response.");//!!! как штатно обработать???
-                    });
+                    console.log("Bad insert basket item response.");
                 }
                 console.log(this);
             })
             .catch(error => console.log(`Error by adding basket item: ${error}`));
             console.log(this);
     }
-
-
-
 
     delBasketItem (productId, amount = 1) {
 // checks the amount of Item with specified productId in the basket. If the basket contains more 
@@ -279,13 +274,9 @@ class Basket {
                                          // the "basket" object is also able to delete item
                      let index = this.basketItems.findIndex(item => item.productId === productId);
                      if (index < 0) {
-                        new Promise((res, rej) => {
-                        throw new Error("There are no such product in the Basket.");//!!! как штатно обработать???
-                    });   
+                        console.log("There are no such product in the Basket.");   
                     } else if (this.basketItems[index].amount < amount) {
-                        new Promise((res, rej) => {
-                        throw new Error("Not enought product in the Basket.");//!!! как штатно обработать???
-                        })
+                        console.log("Not enough product in the Basket.");
                     } else  {
                         let iPrice = this.basketItems[index].price;
                         if (this.basketItems[index].amount === amount) {
@@ -297,14 +288,13 @@ class Basket {
                         this.countGoods -= amount;
                         this.amount -= iPrice*amount;
                     } 
-                console.log(this);
+                } else {
+                     console.log("Bad delete basket item response.");
                 }
+                console.log(this);
             })
             .catch(error => console.log(`Error by deleting basket item: ${error}`));
     }
-
-
-
     clearBasket() {
 // deletes all basket items from the basket 
     } 

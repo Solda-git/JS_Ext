@@ -1,0 +1,157 @@
+[
+    {
+        "timestamp": "2020-07-11T18:07:14+03:00",
+        "productId": 457,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-11T18:13:11+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-11T18:21:20+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-11T18:24:53+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-11T18:28:28+03:00",
+        "productId": 457,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-11T18:31:58+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-11T18:31:59+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-11T18:32:12+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-12T12:57:28+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-12T14:30:36+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-12T14:33:02+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-12T14:34:00+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-13T00:07:21+03:00",
+        "productId": 457,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-13T00:07:25+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-13T00:09:58+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-13T00:11:06+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-13T00:11:06+03:00",
+        "productId": 457,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-13T00:11:23+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-13T00:11:29+03:00",
+        "productId": 457,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-13T00:13:11+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-13T00:13:11+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-13T00:14:24+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-13T00:14:25+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-13T00:14:43+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-13T00:14:43+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-13T00:14:49+03:00",
+        "productId": 457,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-13T00:14:50+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-13T00:14:58+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-13T00:14:58+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-13T00:15:03+03:00",
+        "productId": 457,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-13T00:15:07+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-13T00:15:10+03:00",
+        "productId": 123,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-13T00:15:11+03:00",
+        "action": "change"
+    }
+]

@@ -48,14 +48,11 @@ Vue.component('cart', {
         updateTotals() {
             let totalCost = 0;
             let goodsAmount = 0;
-            for (item in this.cartItems){
-                console.log(`${this.cartItems}`);
-                console.log(`${item}`);
-                console.log(`${item.amount}`);
-                console.log(`${item.price}`);
-                totalCost = totalCost + item.quantity*item.price;
-                goodsAmount += item.amount;    
-            }
+            console.log(this.cartItems[0].quantity);
+            for (let el of this.cartItems) {
+                totalCost = totalCost + el.quantity*el.price;
+                goodsAmount += el.quantity;    
+            }  
             this.amount = totalCost;
             this.countGoods = goodsAmount;
         },
@@ -132,10 +129,11 @@ Vue.component('cart-box', {
                     :cart-box-item="item">
                     </cart-box-item>
                 <div class="cart-details">
-                    <h2> Количество покупок: </h2>
-                    <h3>{{cartAPI.countGoods}}</h3>
-                    <h2> Стоимость заказа: </h2>
-                    <h3>{{cartAPI.amount}}</h3>
+                    <h2 class="cart-info"> Количество покупок: </h2>
+                    <h3 class="cart-info">{{cartAPI.countGoods}}</h3>
+                    <h2 class="cart-info"> Стоимость заказа: </h2>
+                    <h3 class="cart-info">{{cartAPI.amount}}₽</h3>
+                    <button type="button" class="buy-btn">Оформить</button>
                 </div>       
             </div>
         </div> 

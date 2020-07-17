@@ -248,16 +248,21 @@ img {
 }
 .cart-box{
     width: 80%;
-    
-    /*display: flexbox;
-    
-    align-items: center; 
-    justify-content: baseline;
-    justify-self: center;*/
 }
 
-.cart-box-item {
-    
+
+.cart-details {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-info {
+    width: 80%;
+    display: flex;
+    float: left;
 }
 
 .t-img {

@@ -1,12 +1,12 @@
 {
-    "amount": 47200,
-    "countGoods": 2,
+    "amount": 1000,
+    "countGoods": 1,
     "contents": [
         {
             "quantity": 1,
-            "id_product": 124,
-            "product_name": "Keyboard",
-            "price": 1600
-        },
-        {
-            "quantity": 1,
+            "id_product": 456,
+            "product_name": "Мышка",
+            "price": 1000
+        }
+    ]
+}

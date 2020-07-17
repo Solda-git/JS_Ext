@@ -1,0 +1,38 @@
+[
+  {
+    "id_product": 1,
+    "product_name": "Мишка",
+    "price": 3000,
+    "img": "../img/IMG_0099.jpg",
+    "img_small": "",
+    "img_large": "",
+    "product_descr": ""    
+  },
+  {
+    "id_product": 2,
+    "product_name": "Ням фиолетовый",
+    "price": 1000,
+    "img": "../img/IMG_0158.jpg",
+    "img_small": "",
+    "img_large": "",
+    "product_descr": "" 
+  },
+  {
+    "id_product": 3,
+    "product_name": "Ням голубой",
+    "price": 1000,
+    "img": "../img/IMG_0158.jpg",
+    "img_small": "",
+    "img_large": "",
+    "product_descr": "" 
+  },
+  {
+    "id_product": 4,
+    "product_name": "Футболист",
+    "price": 2500,
+    "img": "../img/IMG_0170.jpg",
+    "img_small": "",
+    "img_large": "",
+    "product_descr": "" 
+  }
+]

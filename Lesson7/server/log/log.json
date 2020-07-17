@@ -153,5 +153,65 @@
     {
         "timestamp": "2020-07-13T00:15:11+03:00",
         "action": "change"
+    },
+    {
+        "timestamp": "2020-07-15T18:11:32+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-15T18:11:34+03:00",
+        "productId": 124,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-15T18:11:37+03:00",
+        "productId": 457,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-15T18:11:38+03:00",
+        "productId": 123,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-15T18:11:40+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-15T18:12:33+03:00",
+        "productId": 124,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-15T18:12:34+03:00",
+        "productId": 457,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-15T18:13:22+03:00",
+        "productId": 456,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-15T18:13:25+03:00",
+        "productId": 456,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-15T18:28:06+03:00",
+        "productId": 456,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-15T21:15:48+03:00",
+        "productId": 456,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-15T21:15:52+03:00",
+        "productId": 456,
+        "action": "add"
     }
 ]

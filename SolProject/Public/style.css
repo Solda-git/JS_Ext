@@ -1,0 +1,28 @@
+.t-img {
+    width: 55px;
+}    
+.t-pr-name {
+    width: 200px;
+}
+                
+.t-price {
+     width: 100px;
+}
+                
+.t-amount {
+    width: 150px;
+}
+
+                
+.t-total {
+    width: 150px;
+}
+
+.t-delete{
+    width: 25px;
+}
+
+.t-header {
+    font-size: 1.2em;
+    font-weight: bold;
+}

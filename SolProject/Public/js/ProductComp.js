@@ -23,6 +23,7 @@ Vue.component('product-info', {
     template:`
     <div class="product-info-container">
         <div class="product-info">
+            
             <div v-if="productItem.id_product" class="pr-info-short">
                 <img :src="productItem.img" alt="Some image" class="pr-img">
                 <h2 class="pr-info-title">

@@ -1,9 +1,9 @@
 {
-    "amount": 6000,
+    "amount": 8000,
     "countGoods": 4,
     "contents": [
         {
-            "quantity": 3,
+            "quantity": 2,
             "id_product": 3,
             "product_name": "Ням голубой",
             "price": 1000,
@@ -13,7 +13,7 @@
             "description": "Ням голубой (доступен ассортимент цветов)"
         },
         {
-            "quantity": 1,
+            "quantity": 2,
             "id_product": 1,
             "product_name": "Мишка",
             "price": 3000,

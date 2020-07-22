@@ -1852,5 +1852,21 @@
         "timestamp": "2020-07-21T01:13:13+03:00",
         "productId": 5,
         "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-22T23:43:54+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-22T23:43:54+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-22T23:43:59+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-22T23:44:00+03:00",
+        "action": "change"
     }
 ]

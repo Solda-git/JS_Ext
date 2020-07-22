@@ -33,12 +33,10 @@ button:focus{
 .btn-cart, .logo{
     align-self: center;
 }
-/*.products {*/
-/*display: flex;*/
-/*justify-content: space-between;*/
-/*flex-wrap: wrap;*/
-/*padding: 40px 80px;*/
-/*}*/
+.products-title {
+    padding-left: 50px;
+
+}
 .products{
     column-gap: 30px;
     display: grid;
@@ -312,7 +310,6 @@ img {
 }
 
 .product-info {
-    display:inline-block;
     width: 800px;
     height: 560px;
     display: flex;
@@ -352,4 +349,70 @@ img {
     width: 400px;
 }
 
+/*************/
+/***feedback***/
+.feedback-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px 0px 20px 0px;
+    border: 1 solid #2f2a2d; 
+}
+
+.f-head-title{
+    font-style: oblique;
+}
+
+.feedback-form {
+    height: 400px;
+    width: 700px;
+    border: 1px solid #2f2a2d;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-form-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.f-form-content {
+    width: 380px;
+    height: 350px;
+  
+}
+.f-message {
+    width: 400px;
+    height: 360px;
+    margin-left: 50px;
+}
+
+.f-form-name,
+.f-form-email,
+.f-form-mob,
+.f-form-subject {
+    width: 320px;
+}
+
+.f-text-message {
+    width: 320px;
+}
+/*************/
+/***footer***/
+footer {
+    background-color: #2f2a2d;
+    color: #fafafa;
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+a {
+    text-decoration: none;
+    color:#fafafa;
+}
+.td-footer {
+    width: 35px;
+}
 /*************/

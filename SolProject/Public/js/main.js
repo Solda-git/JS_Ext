@@ -14,8 +14,6 @@ const app = new Vue({
                 })
         },
         postJson(url, data) {
-            console.log('postJson call from Vue');
-            console.log(url);
             return fetch(url, {
                 method: 'POST',
                 headers: {
@@ -40,8 +38,6 @@ const app = new Vue({
               });
         },
         deleteJson(url, data) {
-            console.log('deleteJson call from Vue');
-            console.log(url);
             return fetch(url, {
                 method: 'DELETE',
                 headers: {

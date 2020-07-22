@@ -1,26 +1,26 @@
 {
-    "amount": 4000,
-    "countGoods": 2,
+    "amount": 6000,
+    "countGoods": 4,
     "contents": [
+        {
+            "quantity": 3,
+            "id_product": 3,
+            "product_name": "Ням голубой",
+            "price": 1000,
+            "img": "../img/IMG_0158.jpg",
+            "size": "15см",
+            "stuff": "акриловые нитки, холофайбер",
+            "description": "Ням голубой (доступен ассортимент цветов)"
+        },
         {
             "quantity": 1,
             "id_product": 1,
             "product_name": "Мишка",
             "price": 3000,
             "img": "../img/IMG_0099.jpg",
-            "img_small": "",
-            "img_large": "",
-            "product_descr": ""
-        },
-        {
-            "quantity": 1,
-            "id_product": 3,
-            "product_name": "Ням голубой",
-            "price": 1000,
-            "img": "../img/IMG_0158.jpg",
-            "img_small": "",
-            "img_large": "",
-            "product_descr": ""
+            "size": "35см",
+            "stuff": "акриловые нитки, холофайбер",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing vitae proin sagittis nisl rhoncus. Nibh praesent tristique magna sit amet purus gravida. Nisi scelerisque eu ultrices vitae auctor eu augue ut. Fringilla urna porttitor rhoncus dolor purus non enim praesent. At in tellus integer feugiat. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Diam vulputate ut pharetra sit. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. Habitant morbi tristique senectus et netus. "
         }
     ]
 }

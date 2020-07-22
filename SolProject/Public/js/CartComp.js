@@ -8,14 +8,19 @@ Vue.component('cart', {
           showCart: false,
       }
     },
+   
     methods: {
 
         addProduct(product){
             let find = this.cartItems.find(el => el.id_product === product.id_product);
             if(find){
-                this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: 1});
-                find.quantity++;                                // дописать .then!!! Возможно, является причиной глюка!!!
-                this.updateTotals();
+                this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: 1})
+                .then(data => {
+                    if (data.result === 1) {
+                        find.quantity++;                                
+                        this.updateTotals();
+                    }
+                });                
             } else {
                 let prod = Object.assign({quantity: 1}, product);
                 this.$parent.postJson('/api/cart', prod)
@@ -28,13 +33,17 @@ Vue.component('cart', {
             }
         },
         ///////////////////////Lesson 7///////////////////////////
-        remove(product) {
-
+        remove(product, quantity=1) {
             let find = this.cartItems.find(el => el.id_product === product.id_product);
-            if (find.quantity>1) {
-                this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: -1}); // дописать .then!!! Возможно, является причиной глюка!!!
-                find.quantity--;
-                this.updateTotals();
+            console.log(find.quantity);
+            if (find.quantity>quantity) {
+                this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: -quantity})
+                .then(data => {
+                    if (data.result === 1) {
+                        find.quantity -= quantity;
+                        this.updateTotals();
+                    }
+                });             
             } else {
                 this.$parent.deleteJson('/api/cart', product)
                 .then(data => {
@@ -48,7 +57,6 @@ Vue.component('cart', {
         updateTotals() {
             let totalCost = 0;
             let goodsAmount = 0;
-            console.log(this.cartItems[0].quantity);
             for (let el of this.cartItems) {
                 totalCost = totalCost + el.quantity*el.price;
                 goodsAmount += el.quantity;    
@@ -56,8 +64,13 @@ Vue.component('cart', {
             this.amount = totalCost;
             this.countGoods = goodsAmount;
         },
+        delDump(cartItem, quantity) {
+            // console.log('delDump report');
+            // console.log(cartItem);
+            // console.log(quantity);
+        }
     },
-        ////////////////////////////////////////////////////////////////
+
     mounted(){
         this.$parent.getJson('/api/cart')
             .then(data => {
@@ -68,6 +81,7 @@ Vue.component('cart', {
                 this.countGoods =+ (data.countGoods);
             });
     },
+
     template: `
         <div>
             <button class="btn-cart" type="button" @click="showCart = !showCart">
@@ -118,10 +132,11 @@ Vue.component('cart-box', {
                     <tr>
                         <td class="t-img t-header">Товар</td>
                         <td class="t-pr-name"></td>
+                        <td class="t-pr-size t-header">Размер</td>
                         <td class="t-price t-header">Цена</td>
                         <td class="t-amount t-header">Количество</td>
                         <td class="t-total t-header">Стоимость</td>
-                        <td class="t-total">Удалить</td>
+                        <td class="t-delete">Удалить</td>
                     </tr>
                     <cart-box-item class="cart-box-item" 
                     v-for="item of cartAPI.cartItems" 
@@ -129,10 +144,10 @@ Vue.component('cart-box', {
                     :cart-box-item="item">
                     </cart-box-item>
                 <div class="cart-details">
-                    <h2 class="cart-info"> Количество покупок: </h2>
-                    <h3 class="cart-info">{{cartAPI.countGoods}}</h3>
-                    <h2 class="cart-info"> Стоимость заказа: </h2>
-                    <h3 class="cart-info">{{cartAPI.amount}}₽</h3>
+                    <h3 class="cart-info"> Количество покупок: </h3>
+                    <h2 class="cart-info cart-count-goods">{{cartAPI.countGoods}}</h2>
+                    <h3 class="cart-info"> Стоимость заказа: </h3>
+                    <h2 class="cart-info cart-amount">{{cartAPI.amount}}₽</h2>
                     <button type="button" class="buy-btn">Оформить</button>
                 </div>       
             </div>
@@ -142,19 +157,25 @@ Vue.component('cart-box', {
 
 Vue.component('cart-box-item', {
     props: ['cartBoxItem'],
+    data(){
+        return {
+            cartAPI: this.$root.$refs.cart,
+        }
+    },        
     template: `
       <div class="cart-box-item">
             <tr>
                 <td class="t-img"><img :src="cartBoxItem.img.slice(0, cartBoxItem.img.lastIndexOf('.jpg'))+'_s.jpg'" alt="Some image"> </td>
                 <td class="t-pr-name">{{cartBoxItem.product_name}}</td>
+                <td class="t-pr-size">{{cartBoxItem.size}}</td>
                 <td class="t-price"> {{cartBoxItem.price}}₽</td>
                 <td class="t-amount">
-                    <i class="fas fa-chevron-circle-left"></i>
+                    <button type="button" @click="cartAPI.remove(cartBoxItem)"> <i class="fas fa-chevron-circle-left"></i></button>
                     {{cartBoxItem.quantity}}
-                    <i class="fas fa-chevron-circle-right"></i> 
+                    <button type="button" @click="cartAPI.addProduct(cartBoxItem)"> <i class="fas fa-chevron-circle-right"></i></button> 
                 </td>
                 <td class="t-total">{{cartBoxItem.quantity*cartBoxItem.price}}₽</td>
-                <td class="t-delete"><i class="fas fa-times-circle"></i></td>
+                <td class="t-delete" @click="cartAPI.remove(cartBoxItem, cartBoxItem.quantity)"><i class="fas fa-times-circle"></i></td>
             </tr>
       </div> 
       `

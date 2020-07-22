@@ -17,10 +17,16 @@ const change = (cart, req) => {
   return JSON.stringify(cart, null, 4);
 };
 
-////////////////////Lesson 7//////////////////////////////////////
 const del = (cart, req) => {
-  //const find = cart.contents.find(el => el.id_product === +req.params.id);
-  cart.contents.splice(cart.contents.indexOf(+req.params.id),1);
+  console.log(`Looking for: ${req.body.id_product}!`)
+  const findIndex = cart.contents.findIndex((el, index) => {
+    if (el.id_product === req.body.id_product) {
+      return el;
+    } else {
+      return false;
+    }
+  });
+  cart.contents.splice(findIndex,1);
   cart.amount = cart.amount - (req.body.price * req.body.quantity);
   cart.countGoods -= req.body.quantity;
   logger(moment().format(), req.body.id_product,'delete');////////

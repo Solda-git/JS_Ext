@@ -2,53 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>Форма обратной связи</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c66253d3a9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <input type="text" id="path" value="../img/IMG_0099.jpg">
-    <input type="button" onclick="getPath()" value="вызов">
-    <div class="table">
-        <table>
-            <tr>
-                <td class="t-img t-header">Товар</td>
-                <td class="t-pr-name t-header"></td>
-                <td class="t-price t-header">Цена</td>
-                <td class="t-amount t-header">Количество</td>
-                <td class="t-total t-header">Стоимость</td>
-                <td class="t-total">Удалить</td>
-            </tr>
-        </table>
-            <div>
-                <table>
-                    <tr>
-                        <td class="t-img"><img src='img/IMG_0098_s.jpg'> </td>
-                        <td class="t-pr-name">Кот и мышь </td>
-                        <td class="t-price"> 3500 </td>
-                        <td class="t-amount"><i class="fas fa-chevron-circle-left"></i> <span> 1 </span> <i class="fas fa-chevron-circle-right"></i> </td>
-                        <td class="t-total"> 3500</td>
-                        <td class="t-delete"><i class="fas fa-times-circle"></i></td>
-
-                    </tr>
-                </table>
-            <div>
-        
-        <div>
-            <h2>Всего товаров:</h2>
-            <p> 1 </p>
-            <h2>Общая стоимость покупок: </h2>
-            <p> 3500 </p>
-            <button type="button" class="make-offer">Офрормить заказ</button>
+    <main>
+        <div class="feedback">
+            <h1>Напишите нам о том, о каких игушках вы мечтаете... или о чем-нибудь другом </h1>
+            <div class="fedback-form">
+                <h3 class='f-'><span>*</span>Ваше имя:</h3>
+                <input  class='f-' type="text">
+                <h3  class='f-'><span>*</span>Ваш e-mail:</h3>
+                <input  class='f-' type="email">
+                <h3  class='f-'>Ваш мобильный телефон:</h3>
+                <input  class='f-' type="text">
+                <h3  class='f-'>Тема сообщения:</h3>
+                <input  class='f-'type="text">
+                <h3  class='f-'><span>*</span>Текст сообщения:</h3>
+                <input  class='f-' type="text"> <br>
+                <input  class='f-' type="submit">
+            </div>
         </div>
-    </div>
-    <script>
-        function getPath(){
-            let obj = document.querySelector('#path');
-            alert(obj.value.slice(0, obj.value.lastIndexOf('.jpg')-1)+'_s.jpg');
-            
-        }
-    </script>
-        
-    </body>
+    </main>           
+</body>
 </html>

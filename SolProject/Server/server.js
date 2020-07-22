@@ -19,6 +19,24 @@ app.get('/api/products', (req, res) => {
   });
 });
 
+///////страница продукта!////////
+app.get('/api/product/:id', (req, res) => { 
+  fs.readFile('./server/db/products.json', 'utf-8', (err, data) => {
+    if (err) {
+      res.send(JSON.stringify({result: 0, text: err}));
+      // res.sendStatus(404, JSON.stringify({result: 0, text: err}));
+    } else {
+      console.log(`id_product: ${req.params.id}`);
+      console.log(`typeof data: ${typeof(data)}`);
+      const cart = JSON.parse(data);
+      const find = cart.find(el => el.id_product === +req.params.id);
+      res.send(JSON.stringify(find));
+    }
+  });
+});
+/////////////////////////////////
+
+
 const port = process.env.PORT || 5555;
 app.listen(port, () => {
   console.log(`Listening ${port} port`);

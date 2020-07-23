@@ -1,12 +1,15 @@
 Vue.component('about', {
     data(){
-        return {};
+        return {
+            navAPI: this.$root.$refs.nav,
+        };
+        
     },
     methods: {
 
     },
     template: `
-        <div class="about">
+        <div v-if="navAPI.semaphore.about" class="about">
             <div class="about-box">
                 <h2 class="welcome">welcome to</h2>
                 <h1 class="knitted">knitted world</h1>

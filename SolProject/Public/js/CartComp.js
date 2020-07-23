@@ -122,11 +122,12 @@ Vue.component('cart-box', {
     data(){
         return {
             cartAPI: this.$root.$refs.cart,
+            navAPI: this.$root.$refs.nav,
             showCartBox: true, //false - после программирования меню по умолчанию должно быть не видимо.
         }
       },
       template: `
-      <div class="cart-box-container">    
+      <div v-if="navAPI.semaphore.cartBox" class="cart-box-container">    
             <div class="cart-box">
                 <h1>Ваши покупки: </h1>
                     <tr>

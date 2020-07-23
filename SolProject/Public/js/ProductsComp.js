@@ -4,6 +4,7 @@ Vue.component('products', {
             catalogUrl: '',
             products: [],
             filtered: [],
+            navAPI: this.$root.$refs.nav,
         }
     },
     methods: {
@@ -22,7 +23,7 @@ Vue.component('products', {
             });
     },
     template: `
-        <div class="products">
+        <div v-if="navAPI.semaphore.products"  class="products">
             <product ref="refref" v-for="item of filtered" :key="item.id_product" :product="item"></product>
         </div>
     `

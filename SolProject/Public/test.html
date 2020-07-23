@@ -29,13 +29,25 @@
                             <input  class='f-' type="text"> <br>    
                         </div>
                     </div>
-                    <button type="button" class="buy-btn f-form-button">Отправить</button>
+                    <button type="button" class="buy-btn f-form-button" onclick="a()">Отправить</button>
                 </div>
-                <h3>Об игрушках Knitted World вы можете узнать также в
-                    <a href="https://www.instagram.com/knitted_world_sd/">Инстаграм.<i class="fab fa-instagram"></i></a>
-                </h3>
-            </div>    
+                  
         </div>
-    </main>           
+    </main>  
+    <script>
+        function a(){ 
+            semaphore = {
+                about: true,
+                cartBox: false,
+                products: true,
+                product: false,
+                feedback: false,
+            };
+            console.log(a);
+            semaphore = {false,false,true,false,true};
+            console.log(a);
+            
+        }
+    </script>
 </body>
 </html>

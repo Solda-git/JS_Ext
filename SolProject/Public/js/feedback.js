@@ -1,13 +1,15 @@
 
 Vue.component('feedback', {
     data(){
-        return {};
+        return {
+            navAPI: this.$root.$refs.nav,
+        };
     },
     methods: {
 
     },
     template: `
-        <div class="feedback-container">
+        <div v-if="navAPI.semaphore.feedback" class="feedback-container">
             <div class="feedback">
                 <h3 class="f-head-title">Напишите нам о том, о каких игушках вы мечтаете... или о чем-нибудь другом 
                 </h3>
@@ -31,7 +33,7 @@ Vue.component('feedback', {
                     <button type="button" class="buy-btn f-form-button">Отправить</button>
                 </div>
                 <h3>Об игрушках Knitted World вы можете узнать также в
-                    <a href="https://www.instagram.com/knitted_world_sd/">Инстаграм.</a>
+                    <a href="https://www.instagram.com/knitted_world_sd/"> Инстаграм.</a>
                 </h3>
             </div>    
         </div>

@@ -3,10 +3,12 @@ Vue.component('product-info', {
         return {
             productItem: {},
             cartAPI: this.$root.$refs.cart,
+            navAPI: this.$root.$refs.nav,
         }
     },
     methods: {
         getProductInfo(id_product) {
+            this.navAPI.activate('product');
             console.log(`GetProductInfo(${id_product})`);
             this.$parent.getJson(`/api/product/${id_product}`)
             .then(data => {
@@ -21,9 +23,8 @@ Vue.component('product-info', {
 
     },
     template:`
-    <div class="product-info-container">
-        <div class="product-info">
-            
+    <div v-if="navAPI.semaphore.product" class="product-info-container">
+        <div class="product-info">   
             <div v-if="productItem.id_product" class="pr-info-short">
                 <img :src="productItem.img" alt="Some image" class="pr-img">
                 <h2 class="pr-info-title">
@@ -48,29 +49,4 @@ Vue.component('product-info', {
         </div>
     </div>
     `
-// first variant
-    // `
-    //     <div class='product-info'>
-    //         <div v-if="productItem.id_product" class="pr-info-short">
-    //             <img :src="productItem.img" alt="Some image" class="pr-img">
-    //             <div class="pr-info-title">
-    //                 <p>{{productItem.title}}</p>
-    //             </div>
-    //             <div class="pr-info-price">
-    //                 <p>Цена: {{productItem.price}}₽</p>
-    //             </div>
-    //         </div>
-    //         <div v-if="productItem.id_product" class="pr-info-details">
-    //             <div class="pr-info-size">
-    //                 <p>Размер: {{productItem.size}}</p>
-    //             </div>
-    //             <div class="pr-info-stuff">
-    //                 <p>Материал: {{productItem.stuff}}</p>
-    //             </div>
-    //             <div class="pr-info-desct">
-    //                 <p>Описание:{{productItem.desc}}</p>
-    //             </div>
-    //         </div>
-    //     </div>
-    // `
 });

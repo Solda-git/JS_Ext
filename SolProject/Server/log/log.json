@@ -1888,5 +1888,33 @@
         "timestamp": "2020-07-23T17:19:28+03:00",
         "productId": 3,
         "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-24T01:40:08+03:00",
+        "productId": 4,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-24T01:40:10+03:00",
+        "productId": 2,
+        "action": "add"
+    },
+    {
+        "timestamp": "2020-07-24T01:40:18+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-24T01:40:19+03:00",
+        "action": "change"
+    },
+    {
+        "timestamp": "2020-07-24T01:40:20+03:00",
+        "productId": 2,
+        "action": "delete"
+    },
+    {
+        "timestamp": "2020-07-24T01:40:22+03:00",
+        "productId": 4,
+        "action": "delete"
     }
 ]

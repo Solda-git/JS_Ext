@@ -12,6 +12,7 @@ const navigation = {
     },
     methods: {
         activate(mode){
+            const el = document.querySelector('.products-title');
             switch(mode) {
                 case 'main':
                     this.semaphore.about = true; 
@@ -19,6 +20,7 @@ const navigation = {
                     this.semaphore.products = true;
                     this.semaphore.product = false;
                     this.semaphore.feedback = false;
+                    el.classList.remove('invisible');
                     break;
                 case 'catalog':     
                     this.semaphore.about = false; 
@@ -26,6 +28,7 @@ const navigation = {
                     this.semaphore.products = true;
                     this.semaphore.product = false;
                     this.semaphore.feedback = false;
+                    el.classList.remove('invisible');
                     break;
                 case 'cartBox':        
                     this.semaphore.about = false; 
@@ -33,6 +36,7 @@ const navigation = {
                     this.semaphore.products = true;
                     this.semaphore.product = false;
                     this.semaphore.feedback = false;
+                    el.classList.remove('invisible');
                     break;
                 case 'feedback':     
                     this.semaphore.about = true; 
@@ -40,6 +44,7 @@ const navigation = {
                     this.semaphore.products = false;
                     this.semaphore.product = false;
                     this.semaphore.feedback = true;
+                    el.classList.add('invisible');
                     break;
                 case "product": 
                     this.semaphore.about = false; 
@@ -54,6 +59,7 @@ const navigation = {
                     this.semaphore.products = true;
                     this.semaphore.product = false;
                     this.semaphore.feedback = false;
+                    el.classList.remove('invisible');
                     
             }
         },

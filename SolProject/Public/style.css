@@ -1,0 +1,43 @@
+.feedback-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px 0px 20px 0px;
+    border: 1 solid #2f2a2d; 
+}
+
+.f-head-title{
+    font-style: oblique;
+}
+
+.feedback-form {
+    height: 560px;
+    width: 800px;
+    border: 1px solid #2f2a2d;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-form-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.f-form-content {
+    width: 380px;
+    height: 600px;
+}
+.f-message {
+    width: 400px;
+    height: 500px;
+}
+
+/* 
+.f-form-button {
+  display: inline;
+} */
+/**************/

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c66253d3a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+         <div class="feedback-container">
+            <div class="feedback">
+                <h3 class="f-head-title">Напишите нам о том, о каких игушках вы мечтаете... или о чем-нибудь другом 
+                </h3>
+                <div class="feedback-form">
+                    <div class="f-form-container">
+                        <div class="f-form-content">
+                            <h3 class='f-'><span>*</span>Ваше имя:</h3>
+                            <input  class='f-' type="text">
+                            <h3  class='f-'><span>*</span>Ваш e-mail:</h3>
+                            <input  class='f-' type="email">
+                            <h3  class='f-'>Ваш мобильный телефон:</h3>
+                            <input  class='f-' type="text">
+                            <h3  class='f-'>Тема сообщения:</h3>
+                            <input  class='f-'type="text">
+                        </div>    
+                        <div class="f-message">
+                            <h3  class='f-'><span>*</span>Текст сообщения:</h3>     
+                            <input  class='f-' type="text"> <br>    
+                        </div>
+                    </div>
+                    <button type="button" class="buy-btn f-form-button" onclick="a()">Отправить</button>
+                </div>
+                  
+        </div>
+    </main>  
+    <script>
+        function a(){ 
+            semaphore = {
+                about: true,
+                cartBox: false,
+                products: true,
+                product: false,
+                feedback: false,
+            };
+            console.log(a);
+            semaphore = {false,false,true,false,true};
+            console.log(a);
+            
+        }
+    </script>
+</body>
+</html>

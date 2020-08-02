@@ -39,7 +39,7 @@ const navigation = {
                     el.classList.remove('invisible');
                     break;
                 case 'feedback':     
-                    this.semaphore.about = true; 
+                    this.semaphore.about = false; 
                     this.semaphore.cartBox = false;
                     this.semaphore.products = false;
                     this.semaphore.product = false;

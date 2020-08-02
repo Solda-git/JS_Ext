@@ -3,10 +3,11 @@ body{
 }
 header{
     display: flex;
-    background-color: #2f2a2d;
+    /* background-color: #2f2a2d; */
     justify-content: space-between;
     color: #fafafa;
     padding: 30px 80px;
+    background-image: url(/img/background3.jpg);
 }
 button:focus{
     outline: none;
@@ -206,18 +207,22 @@ img {
 
 }
 .about {
-    border: 1px solid #2f2a2d;
+    /* border: 1px solid #2f2a2d; */
+    border: none;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    background-image: url(/img/background4.png);
 }
 
 .about-box {
     width: 80%;
-    border: 1px solid #fafafa;
-    color: #fafafa;
-    background-color: #2f2a2d;
+    /* border: 1px solid #fafafa; */
+    border: none;
+    color: #2f2a2d;
+    /* background-color: #2f2a2d; */
     padding-left: 20px;
+    background-image: url(/img/background2.jpg);
 }
 /*
 .welcome {

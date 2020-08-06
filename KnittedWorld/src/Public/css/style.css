@@ -248,6 +248,7 @@ img {
     display: flex;
     justify-content: center;
     border: 1px solid #2f2a2d;
+    /* background-image: url(/img/background4.png); */
 }
 .cart-box {
     width: 80%;
@@ -362,7 +363,8 @@ img {
     justify-content: center;
     background-color: #fff;
     padding: 20px 0px 20px 0px;
-    border: 1 solid #2f2a2d; 
+    border: 1 solid #2f2a2d;
+    background-image: url(/img/background4.png); 
 }
 
 .f-head-title{
@@ -412,6 +414,7 @@ footer {
     padding: 30px 80px;
     display: flex;
     justify-content: space-between;
+    background-image: url(/img/background4.jpg);
 }
 
 /* поправить    !!!! */

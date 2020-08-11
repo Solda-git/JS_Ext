@@ -445,6 +445,10 @@ a {
     width: 35px;
 }
 
+.fa-facebook-f {
+    padding: 0 4px;
+}
+
 .contacts-btn {
     background: rgba(0,0,0,0);
     border: none;

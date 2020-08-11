@@ -11,7 +11,7 @@ const feedback = {
     template: `
         <div v-if="navAPI.semaphore.feedback" class="feedback-container">
             <div class="feedback">
-                <h3 class="f-head-title">Напишите нам о том, о каких игушках вы мечтаете... или о чем-нибудь другом 
+                <h3 class="f-head-title">Напишите нам, о каких игушках вы мечтаете... или о чем-нибудь другом 
                 </h3>
                 <div class="feedback-form">
                     <div class="f-form-container">

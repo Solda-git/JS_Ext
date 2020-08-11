@@ -147,7 +147,7 @@ const cartBox = {
         return {
             cartAPI: this.$root.$refs.cart,
             navAPI: this.$root.$refs.nav,
-            showCartBox: true, //false - после программирования меню по умолчанию должно быть не видимо.
+            showCartBox: false, //false - после программирования меню по умолчанию должно быть не видимо.
         }
       },
       template: `

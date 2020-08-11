@@ -64,9 +64,7 @@ const navigation = {
             }
         },
     },
-    mounted(){
-        //this.activate('main');
-    },
+
     template: `
         <div class="navigation">
             <nav> 

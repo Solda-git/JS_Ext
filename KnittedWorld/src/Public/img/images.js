@@ -10,7 +10,9 @@ import img9 from './background3.jpg';
 import img10 from './background2.jpg';
 import img11 from './background4.png';
 import img12 from './background4.jpg';
+import logo from './logo.png';
+
 // import img9 from './IMG_0099.jpg';
 // import img10 from './IMG_0099.jpg';
 
-export {img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12}
+export {img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,logo}

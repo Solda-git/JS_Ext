@@ -15,7 +15,7 @@ const product = {
 
     template: `
     <div class="product-item">
-                <img :src="product.img" alt="Some img" @click="productAPI.getProductInfo(product.id_product)">
+                <img :src="product.img" class="product-item-img" alt="Some img" @click="productAPI.getProductInfo(product.id_product)">
                 <div class="desc">
                     <h3>{{product.product_name}}</h3>
                     <p><strong>Цена: </strong>{{product.price}} ₽</p>

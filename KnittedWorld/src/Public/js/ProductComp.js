@@ -25,7 +25,7 @@ const productInfo = {
     template:`
     <div v-if="navAPI.semaphore.product" class="product-info-container">
         <div class="product-info">   
-            <div v-if="productItem.id_product" class="pr-info-short">
+            <div class="pr-info-short">
                 <img :src="productItem.img" alt="Some image" class="pr-img">
                 <h2 class="pr-info-title">
                     {{productItem.product_name}}
@@ -38,7 +38,7 @@ const productInfo = {
                     <i class="fas fa-shopping-cart"></i></button>
                 </div>
             </div>
-            <div v-if="productItem.id_product" class="pr-info-details">
+            <div class="pr-info-details">
                 <h3 class="pr-info-size">Размер: </h3> 
                 <p class="pr-info-text">{{productItem.size}}</p>
                 <h3 class="pr-info-stuff">Материал: </h3>

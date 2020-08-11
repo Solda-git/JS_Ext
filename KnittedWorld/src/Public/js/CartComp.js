@@ -153,7 +153,7 @@ const cartBox = {
       template: `
       <div v-if="navAPI.semaphore.cartBox" class="cart-box-container">    
             <div class="cart-box">
-                <h1>Ваши покупки: </h1>
+                <h2>КОРЗИНА</h2>
                     <tr>
                         <td class="t-img t-header">Товар</td>
                         <td class="t-pr-name"></td>

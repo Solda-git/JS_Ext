@@ -10,7 +10,9 @@
 <body>
 <div id="app">
     <header>
-        <div class="logo">Интернет-магазин</div>
+        <div class="logo">
+            <img class="logo-img" src="./img/logo.png" alt="logo">
+        </div>
         <navigation ref="nav"></navigation>
         <div class="cart">
             <search></search>
@@ -34,7 +36,9 @@
         <div>
             <p>Ссылки: 
                 <tr>
-                    <td class="td-footer" @click="app.$refs.nav.activate('feedback')"><i class="far fa-envelope"></i></td>
+                    <td class="td-footer">
+                        <button type="button" class="contacts-btn" @click="$refs.nav.activate('feedback')"> <i class="far fa-envelope"></i> </button>
+                    </td>
                     <td class="td-footer"><a href="https://www.instagram.com/knitted_world_sd/">
                         <i class="fab fa-instagram"></i></a>
                     </td>
@@ -48,14 +52,5 @@
 </div>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- <script src="js/NavComp.js"></script>
-    <script src="js/CartComp.js"></script>
-    <script src="js/AboutComp.js"></script>
-    <script src="js/ProductsComp.js"></script>
-    <script src="js/ProductComp.js"></script>
-    <script src="js/feedback.js"></script>
-    <script src="js/FilterComp.js"></script>
-    <script src="js/ErrorComp.js"></script>
-    <script src="js/main.js"></script> -->
 </body>
 </html>

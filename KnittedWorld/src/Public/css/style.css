@@ -3,33 +3,40 @@ body{
 }
 header{
     display: flex;
-    /* background-color: #2f2a2d; */
     justify-content: space-between;
     color: #fafafa;
-    padding: 30px 80px;
+    padding: 0px 40px;
     background-image: url(/img/background3.jpg);
 }
 button:focus{
     outline: none;
 }
 .logo{
-
+    color:#2f2a2d;
     text-transform: uppercase;
     font-weight: bold;
+    height: 100px;
+ 
 }
+
+.logo-img {
+    height: 100px;
+    
+}
+
 .btn-cart{
-    background-color: #fafafa;
+    background-color: #4a4568;;
     padding: 10px 20px;
     border: 1px solid transparent;
-    color: #2f2a2d;
+    color: #fafafa;
     border-radius: 5px;
     transition: all ease-in-out .4s;
     cursor: pointer;
 }
 .btn-cart:hover{
     background-color: transparent;
-    border-color: #fafafa;
-    color: #fafafa;
+    border-color: #2f2a2d;
+    color: #2f2a2d;
 }
 .btn-cart, .logo{
     align-self: center;
@@ -45,6 +52,7 @@ button:focus{
     grid-template-rows: 1fr;
     padding: 40px 80px;
     justify-content: space-between;
+    background-color: #C0BED0;
 }
 p {
     margin: 0 0 5px 0;
@@ -57,6 +65,11 @@ p {
     overflow: hidden;
     margin: 20px 0;
 }
+
+.product-item-img {
+    border: 3px solid #fff;
+}
+
 img {
     max-width: 100%;
     height: auto
@@ -68,6 +81,9 @@ img {
 .cart{
     display: flex;
     position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
 }
 .cart-block{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
@@ -99,7 +115,7 @@ img {
 
 .buy-btn, .del-btn, .nav-btn{
     margin-top: 5px;
-    background-color: #2f2a2d;
+    background-color: #4a4568;
     padding: 5px 15px;
     border: 1px solid transparent;
     color: #fafafa;
@@ -107,10 +123,13 @@ img {
     transition: all ease-in-out .4s;
     cursor: pointer;
 }
+
+
 .buy-btn:hover, .del-btn:hover, .nav-btn:hover{
-    background-color: #fafafa;
+    background-color: transparent;
+    border-color: #2f2a2d;
     color: #2f2a2d;
-    border: 1px solid #2f2a2d;
+    font-weight: 700;
 }
 .cart-item {
     display: flex;
@@ -146,7 +165,7 @@ img {
 .btn-search{
     background-color: transparent;
     border: none;
-    color: #fafafa;
+    color: #2f2a2d;
     font-size: 1.2em;
     position: absolute;
     bottom: 5px;
@@ -159,15 +178,18 @@ img {
 }
 .search-field:focus{
     outline: none;
+    background-color: #fff;
+    font-weight: 700;
 }
 .search-field {
     box-sizing: border-box;
     width: 200px;
-    color: #fafafa;
+    color: #2f2a2d;
     padding: 10px;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid #fafafa;
+    border-bottom: 2px solid #2f2a2d;
+    font-weight: 700;
 }
 .error-msg {
     padding: 30px 20px;
@@ -201,9 +223,10 @@ img {
 .navigation{
     position: relative;
     margin-left: 20px;
-    margin-top: 2px;
+    margin-top: 32px;
     font-weight: bold;
     display: inline-block;
+
 
 }
 .about {
@@ -222,6 +245,7 @@ img {
     color: #2f2a2d;
     /* background-color: #2f2a2d; */
     padding-left: 20px;
+    margin: 30px 80px;
     background-image: url(/img/background2.jpg);
 }
 /*
@@ -247,11 +271,16 @@ img {
 .cart-box-container {
     display: flex;
     justify-content: center;
-    border: 1px solid #2f2a2d;
+    background-image: url(/img/background4.png);
+    
+    /* border: 1px solid #2f2a2d; */
     /* background-image: url(/img/background4.png); */
 }
 .cart-box {
     width: 80%;
+    background-color: #C0BED0;
+    margin: 30px 80px;
+    padding: 30px 30px;
 }
 
 
@@ -312,7 +341,8 @@ img {
     justify-content: center;
     background-color: #2f2a2d;
     padding: 20px 0px 20px 0px;
-    border: 1 solid #fafafa;
+    /* border: 1 solid #fafafa; */
+    background-image: url(/img/background4.png);
 }
 
 .product-info {
@@ -328,7 +358,7 @@ img {
 
 .pr-info-short {
     /* float:left; */
-    border: 1px solid #2f2a2d;
+    border: 3px solid #4a4568;
     background-color: #fff;
     margin: 0 auto;
     height: 560px;
@@ -336,7 +366,8 @@ img {
 } 
 
 .pr-info-details {
-    border: 1px solid #2f2a2d;
+    border: 3px solid #4a4568;
+    border-left: none;
     margin: 0 auto;
     background-color: #fff;
     height: 560px;
@@ -409,8 +440,9 @@ img {
 /*************/
 /***footer***/
 footer {
-    background-color: #2f2a2d;
-    color: #fafafa;
+    /* background-color: #2f2a2d; */
+    color:  #2f2a2d;
+    font-weight: 700;
     padding: 30px 80px;
     display: flex;
     justify-content: space-between;
@@ -420,10 +452,19 @@ footer {
 /* поправить    !!!! */
 a { 
     text-decoration: none;
-    color:#fafafa;
+    color: #2f2a2d;
+    font-weight: 700;
 }
 
 .td-footer {
     width: 35px;
+}
+
+.contacts-btn {
+    background: rgba(0,0,0,0);
+    border: none;
+}
+.contacts-btn:hover {
+    cursor: pointer;
 }
 /*************/
